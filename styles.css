@@ -1,0 +1,113 @@
+/*
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+*/
+:root {
+    --level: -50%;
+  }
+html{
+    background-color: #191A19;
+}
+.border-bottom-green{
+    border-bottom: 1px solid #1E5128!important;
+}
+.bg-dark{
+    background-color: #191A19!important;
+}
+.text-green-dark{
+    color: #4E9F3D!important;
+}
+.text-yellow{
+    color: #D8E9A8!important;
+}
+.side-bar{
+    border-radius: 10px!important;
+    background: #191A19!important;
+    box-shadow:  10px 10px 20px #151615,
+             -10px -10px 20px #1d1e1d!important;  
+}
+.side-bar>ul>li:hover{
+    border-radius: 4px;
+    background: #FFB534;
+}
+.side-bar>ul>li:hover > a{
+    color: #191A19!important;
+}
+.h-100vh{
+    height: 100vh;
+}
+.side-bar>ul>li>a{
+    color:#D8E9A8!important;
+}
+.moisture-level{
+    border-radius: 10px!important;
+    background: #191A19!important;
+    box-shadow:  10px 10px 20px #151615,
+             -10px -10px 20px #1d1e1d!important;
+}
+.crop-box > article >div{
+    text-align: center;
+    border-radius: 10px!important;
+    background: #191A19!important;
+    box-shadow:  10px 10px 20px #151615,
+             -10px -10px 20px #1d1e1d!important;
+    padding: 10px;
+    padding-top: 25px;
+    transition: all 0.6s;
+}
+.crop-box > article >div:hover{
+    border: 1px solid #4E9F3D;
+}
+.water-drop{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+    margin-top: 50px;
+    margin-left: 20px;
+    border: 5px solid #1640D6;
+    position: relative;
+    overflow: hidden;
+}
+.water-drop::after{
+    content: '';
+    position: absolute;
+    top: var(--level);
+    left: -80%;
+    background-image: url("wave.png");
+    background-size: cover;
+    transform: rotate(45deg);
+    animation: wave 12s linear infinite;
+    width: 200%;
+    height: 200%;
+    background-repeat: repeat-x;
+    
+}
+.live-moisture{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11em;
+    color: #D8E9A8;
+    font-weight: 400;
+}
+@keyframes wave {
+    0%{
+        background-position:  0px;
+    }
+    100%{
+        background-position: 3600px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+      text-align: center;
+    }
+    .side-bar{
+        display: none;
+    }
+}
+
+.water_req{
+    height: 100px;
+}
