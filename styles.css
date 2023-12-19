@@ -8,6 +8,9 @@ font-family: 'Noto Sans', sans-serif;
 html{
     background-color: #191A19;
 }
+.bg-dark-green{
+    background-color: #163020!important;
+}
 .border-bottom-green{
     border-bottom: 1px solid #1E5128!important;
 }
@@ -19,6 +22,9 @@ html{
 }
 .text-yellow{
     color: #D8E9A8!important;
+}
+.btn-rounded{
+    border-radius: 100px;
 }
 .side-bar{
     border-radius: 10px!important;
@@ -58,6 +64,11 @@ html{
 .crop-box > article >div:hover{
     border: 1px solid #4E9F3D;
 }
+.big-box > article > p{
+
+    font-size: 12px!important;
+
+}
 .water-drop{
     width: 160px;
     height: 160px;
@@ -70,6 +81,24 @@ html{
     position: relative;
     overflow: hidden;
 }
+.box-language{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background-color: #C1F2B0;
+    position: absolute;
+    bottom: 5%;
+    right:5%;
+}
+.box-language > button{
+    border: none!important;
+}
+.box-language > button::after{
+    content: ""!important;
+    border: none;
+    margin: 0px;
+    display: block;
+}
 .water-drop::after{
     content: '';
     position: absolute;
@@ -78,17 +107,36 @@ html{
     background-image: url("wave.png");
     background-size: cover;
     transform: rotate(45deg);
-    animation: wave 12s linear infinite;
+    animation: wave 14s linear infinite;
     width: 200%;
     height: 200%;
     background-repeat: repeat-x;
     
+}
+.navbar-toggler-icon{
+    background-image: url("menu.svg")!important;
+    background-size: 4400%;
+}
+.crop-box-circle{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background-color: #092635!important;
 }
 .live-moisture{
     font-family: 'Bebas Neue', sans-serif;
     font-size: 11em;
     color: #D8E9A8;
     font-weight: 400;
+}
+.font-bebas-new{
+    font-family: 'Bebas Neue', sans-serif!important;
+}
+.big-box{
+    border-radius: 13px;
+    background-color: #C1F2B0!important;
+    color:#191A19;
+    height: 100px!important;
 }
 @keyframes wave {
     0%{
@@ -106,8 +154,59 @@ html{
     .side-bar{
         display: none;
     }
+    .entry_form{
+        text-align: left;
+    }
 }
 
 .water_req{
     height: 100px;
 }
+.info-bar-animation{
+    padding-top:10px;
+    padding-bottom: 10px;
+    border-radius: 13px;
+    background-color: #050505;
+    margin-top:0.8em;
+}
+.rounded-data{
+    background-color: #C1F2B0!important;
+    color: #050505;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+}
+.light-box-neomorphism{
+    border-radius: 13px;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 10px #bebebe,
+             -5px -5px 10px #ffffff;
+    height: 150px;
+    font-size: 12px;
+}
+.light-box-neomorphism:hover{
+    border-radius: 13px;
+    background: #191A19;
+    color:#fff;
+}
+.select_stage > *{
+    padding: 5px!important;
+}
+.btn-light-green-rounded{
+    background-color: #191A19;
+    border-radius: 50px;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.entry_form{
+    position: absolute;
+    top:0%;
+    width: 100%;
+    z-index: 1000;
+    left: 105%;
+    transition: 0.3s all linear;
+    height: 100vh!important;
+    overflow: scroll;
+}
+

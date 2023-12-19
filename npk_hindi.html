@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--Bebas Neue and Nato hindi Start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,300;0,700;1,200;1,400;1,500&display=swap" rel="stylesheet">
+    <!--Bebas Neue and Nato hindi End-->
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>पोषक तत्वों की उपलब्धता</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body class="bg-dark">
+    <!-- As a heading -->
+    <!--navbar start-->
+    <section class="wrapper w-100 h-100vh" style="position: relative;overflow: hidden;">
+        <nav class="navbar bg-dark text-white navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">एग्रोवेंचर</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item px-4">
+                    <a class="nav-link text-white d-flex" aria-current="page" href="index_hindi.html">
+                        <i data-feather="droplet" width="18" ></i>&nbsp;नमी
+                    </a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link d-flex text-white" href="npk_hindi.html">
+                        <i data-feather="globe" width="18" ></i>&nbsp;पोषक
+                    </a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <!--Navbr end-->
+        <section class="app w-100 text-center mt-5">
+            <section class="container d-flex align-items-center justify-content-between">
+            <section>
+                <article class="crop-box-circle bg-dark-green text-center d-flex align-items-center justify-content-center">
+                    <img src="wheat-plant.png" id="crop_image" height="50" class="">
+                </article>
+                <p class="text-white" id="crop">गेहूँ</p>
+            </section>
+            <section>
+                    <a href="#" class="btn btn-rounded btn-warning d-flex align-items-center" id="add_info_btn">
+                        &nbsp;<i data-feather="plus-circle" width="14" > </i>&nbsp;
+                        <span class="small">जानकारी जोड़ें</span>
+                    </a>
+            </section>
+                
+            </section>
+        </section>
+        <section class="">
+            <section class="container">
+                <section class="row">
+                    <section class="col-4 p-0 ps-2">
+                        <section class="big-box w-100 d-flex align-items-center justify-content-center pt-4">
+                            <article class="py-4">
+                                <h1 class="font-bebas-new display-3 m-0">N</h1>
+                                <p class="" id="nitrogen">
+                                    <span id="nitrogen_data">120</span><span> मिलीग्राम प्रति किग्रा</span>
+                                </p>
+                            </article>
+                        </section>
+                    </section>
+
+                    <section class="col-4 px-2">
+                        <section class="big-box w-100 d-flex align-items-center justify-content-center pt-4">
+                            <article class="py-4">
+                                <h1 class="font-bebas-new display-3 m-0">P</h1>
+                                <p class="" id="phosphorus">
+                                    <span id="phosphorus_data">120</span><span> मिलीग्राम प्रति किग्रा</span>
+                                </p>
+                            </article>
+                        </section>
+                    </section>
+
+                    <section class="col-4 p-0 pe-2">
+                        <section class="big-box w-100 d-flex align-items-center justify-content-center pt-4">
+                            <article class="py-4">
+                                <h1 class="font-bebas-new display-3 m-0">K</h1>
+                                <p class="" id="phosphorus">
+                                    <span id="phosphorus_data">120</span><span> मिलीग्राम प्रति किग्रा</span>
+                                </p>
+                            </article>
+                        </section>
+                    </section>
+                    
+                </section>
+
+                <!--Fertilizer requirement start-->
+                <section class="pt-2">
+                    <section class="d-flex justify-content-between py-3 align-items-center info-bar-animation px-2">
+                        <article>
+                            <img src="128/5.png" id="stage_image" height="90">
+                            <p class="text-white small pt-1 mb-2">फसल की<span id="crop_stage"> वृद्धि चरण </p>
+                        </article>
+                        <article class="text-white ps-2" style="text-align: left;">
+                            <article class="d-flex align-items-center">
+                                <p class="rounded-data me-1 small"><i data-feather="globe" width="10" > </i> फसल : <span id="crop"> गेहूँ </span></p>
+                                <p class="rounded-data small"><i data-feather="map" width="10" > </i> खेत का आकार : <span id="land_size_info"> दो </span><span id="land_unit">एकड़</span></p>
+                            </article>
+                            <article>
+                                <p class="pe-2">
+                                    कृपया <span><strong id="quantity"></strong></span> 50 किग्रा<span id="fertilizer"> <strong> DAP </strong></span> भूमि आकार  <span><strong id="field_size">2 </strong></span><span id="land_unit"> एकड़ के लिए डाले</span>.
+                                </p>
+                            </article>
+                            <!--<p>Quantity : <span id="crop"> 50 </span>kg</p>
+                            <p>Landsize : <span id="crop"> 2 </span><span id="land_unit">acre</span></p>-->
+                        </article>
+                    </section>
+
+                    <!--<section class="d-flex align-content-between align-items-center info-bar-animation">
+
+                    </section>-->
+                </section>
+                <!--Fertilizer requirement end-->
+            </section>  
+        </section>
+        
+        <!--entry form-->
+        <section class="entry_form bg-light" id="slide_info_form" style="text-align: left;">
+            <section class="container">
+                <section class="ps-5 pt-5">
+                    <a href="#" id="slide_info_close" class="text-dark"> 
+                        <i data-feather="x-circle" width="18" ></i>
+                    </a>
+                </section>
+                <form class="g-3 needs-validation p-5">
+                    <h5 class="pb-4">अपना खेत जोड़ें</h5>
+                    <div>
+                        <label for="crop_select" class="form-label">फसल</label>
+                        <select class="form-select" id="crop_select" required>
+                            <option selected disabled value="">चुनें...</option>
+                            <option value="wheat">गेहूँ</option>
+                            <option value="bajra">बाजरा</option>
+                            <option value="maize">मक्का</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            कृपया वैध फसल दर्ज करें
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="pt-4">
+                        <label for="land_size" class="form-label">एकड़ में खेत का आकार जोड़ें</label>
+                        <input type="text" class="form-control" id="land_size" required>
+                        <div class="invalid-feedback">
+                            कृपया खेत का आकार बताएं
+                        </div>
+                    </div>
+
+                    <p class="mt-4">फसल की वृद्धि चरण चुनें</p>
+                    <section class="row select_stage mt-1">
+                        <article class="col-4 text-center">
+                            <article class="light-box-neomorphism p-2" id="seeding">
+                                <img src="512/1.png" height="80">
+                                <p>अंकुरण</p>
+                            </article>
+                        </article>
+
+                        <article class="col-4 text-center">
+                            <article class="light-box-neomorphism p-2" id="tillering">
+                                <img src="512/2.png" height="80">
+                                <p>उद्भव</p>
+                            </article>
+                        </article>
+
+                        <article class="col-4 text-center">
+                            <article class="light-box-neomorphism p-2" id="heading">
+                                <img src="512/3.png" height="80">
+                                <p>कल्ले निकलना</p>
+                            </article>
+                        </article>
+                    </section>
+
+                    <section class="row select_stage mt-1">
+                        <article class="col-4 text-center">
+                            <article class="light-box-neomorphism p-2" id="heading">
+                                <img src="512/4.png" height="80">
+                                <p>तनो का बढ़ाव</p>
+                            </article>
+                        </article>
+
+                        <article class="col-4 text-center">
+                            <article class="light-box-neomorphism p-2" id="heading">
+                                <img src="512/5.png" height="80">
+                                <p>स्पाइक निकलना</p>
+                            </article>
+                        </article>
+
+                        <article class="col-4 text-center">
+                            <article class="light-box-neomorphism p-2" id="heading">
+                                <img src="512/6.png" height="80">
+                                <p>परिपक्वता</p>
+                            </article>
+                        </article>
+
+                    </section>
+
+                    <div class="pt-4">
+                        <button class="btn btn-light-green-rounded" id="add_farm_btn">जमा करें</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+        
+        <div class="box-language d-flex align-items-center justify-content-center">
+            <button class="dropdown-toggle bg-transparent border-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="language.png" width="28">
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="npk.html">English</a></li>
+              <li><a class="dropdown-item" href="npk_hindi.html">Hindi</a></li>
+            </ul>
+          </div>
+
+        <!--<section class="box-language d-flex align-items-center justify-content-center">
+            <img src="language.png" width="28">
+        </section>-->
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        /*Variable Declaration*/
+        let all_stages_form=document.querySelectorAll(".select_stage > article");
+        console.log(all_stages_form);
+        let crop="";
+        let landSize="";
+        let crop_stage="";
+        let add_info_btn=document.querySelector("#add_info_btn");
+        let slide_info_form=document.querySelector("#slide_info_form");
+        let slide_info_close=document.querySelector("#slide_info_close");
+        let add_farm_btn=document.querySelector("#add_farm_btn");
+        let crop_info_bar=document.querySelector("#crop");
+        let landsize_info_bar=document.querySelector("#land_size_info");
+        let stage_info_bar=document.querySelector("#crop_stage");
+        let stage_image_info_bar=document.querySelector("#stage_image");
+        let crop_image_info_bar=document.querySelector("#crop_image");
+        let field_size_info_bar=document.querySelector("#field_size");
+        const crop_images = {
+            "wheat":"wheat-plant.png", 
+            "mustard":"mustard.png",
+            "jowar":"Jowar.png", 
+            "barley":"barley.png",
+            "millet":"millet.png",
+            "bajra":"barley.png"
+        };
+        const crop_stages={
+            "अंकुरण":"512/1.png",
+            "उद्भव":"512/2.png",
+            "कल्ले निकलना":"512/3.png",
+            "तनो का बढ़ाव":"512/4.png",
+            "स्पाइक निकलना":"512/5.png",
+            "परिपक्वता":"512/6.png"
+        };
+        function slide_in_form(){
+            slide_info_form.style="left:0%";
+        }
+        function set_farm_values(){
+            if (crop === "" && landSize==="" && crop_stage==="") {
+            // Variable is an empty string
+            console.log("Variable is an empty string");
+            }
+            else{
+                crop=document.querySelector("#crop_select").value;
+                console.log(crop);
+                landSize=document.querySelector("#land_size").value;
+                console.log(landSize);
+                slide_info_form.style="left:100%";
+                crop_info_bar.textContent=crop;
+                landsize_info_bar.textContent=landSize;
+                stage_info_bar.textContent=crop_stage;
+                stage_image_info_bar.src=crop_stages[crop_stage.toLowerCase()];
+                crop_image_info_bar.src=crop_images[crop.toLowerCase()];
+                field_size_info_bar.textContent=landSize;
+            }
+        }
+        add_info_btn.addEventListener('click', slide_in_form); 
+        slide_info_close.addEventListener('click',slide_out_form);
+        add_farm_btn.addEventListener('click', set_farm_values);
+        function slide_out_form(){
+            slide_info_form.style="left:100%";
+        }
+        function storeStages(){
+            crop_stage=this.querySelector("p").textContent;
+            console.log(crop_stage);
+        }
+        // Attach the click event listener to each button using forEach
+        all_stages_form.forEach(button => {
+            button.addEventListener('click', storeStages);
+        });
+    </script>
+  </body>
+</html>
