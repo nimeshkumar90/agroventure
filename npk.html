@@ -98,7 +98,7 @@
 
                 <!--Fertilizer requirement start-->
                 <section class="pt-2">
-                    <section class="d-flex justify-content-between py-3 align-items-center info-bar-animation px-2">
+                    <section class="d-flex justify-content-between py-3 align-items-center info-bar-animation px-2" id="Infobar">
                         <article>
                             <img src="128/5.png" id="stage_image" height="90">
                             <p class="text-white small pt-1 mb-2">Stage <span id="crop_stage"> Heading </p>
@@ -266,7 +266,7 @@
         function set_farm_values(){
             if (crop === "" && landSize==="" && crop_stage==="") {
             // Variable is an empty string
-            console.log("Variable is an empty string");
+              console.log("Variable is an empty string");
             }
             else{
                 crop=document.querySelector("#crop_select").value;
@@ -280,6 +280,7 @@
                 stage_image_info_bar.src=crop_stages[crop_stage.toLowerCase()];
                 crop_image_info_bar.src=crop_images[crop.toLowerCase()];
                 field_size_info_bar.textContent=landSize;
+                document.querySelector("#infobar").style="display:flex";
             }
         }
         add_info_btn.addEventListener('click', slide_in_form); 
@@ -301,8 +302,6 @@
             let nitrogen_data=document.querySelector("#nitrogen_data").textContent=n;
             let phosphorus_data=document.querySelector("#phosphorus_data").textContent=p;
             let potassium_data=document.querySelector("#potassium_data").textContent=k;
-
-
         }
         async function fetchData() {
             try {
@@ -336,6 +335,14 @@
             const tgt = e.target;
             crop_stage_drop_down_element.innerHTML="<i data-feather='trending-up' width='18' ></i> &nbsp;" + document.getElementById(tgt.id).textContent;
             current_stage=document.getElementById(tgt.id).textContent;
+            
+            if (crop === "" && landSize==="" && crop_stage==="") {
+            // Variable is an empty string
+            document.querySelector("#infobar").style="display:none";
+            
+              console.log("Variable is an empty string");
+            }
+            
             });*/
         });
 
