@@ -285,6 +285,7 @@
                 stage_image_info_bar.src=crop_stages[crop_stage.toLowerCase()];
                 crop_image_info_bar.src=crop_images[crop.toLowerCase()];
                 field_size_info_bar.textContent=landSize;
+                document.querySelector("#Infobar").style="display:flex";
             }
         }
         add_info_btn.addEventListener('click', slide_in_form); 
