@@ -6,6 +6,7 @@ let moisture_level_element=document.querySelector("#water_level");
 let crop_element=document.querySelector("#crop");
 let crop_stage_drop_down_element=document.querySelector("#crop_stage_drop_down");
 let crops_icons_element=document.querySelectorAll("#crops_icons article");
+let nim_moisture_level=0;
 //Variables end
 function changeMoistureLevel(moisture){
     // Modify the style of the ::before pseudo-element
