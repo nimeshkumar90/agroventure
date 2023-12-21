@@ -26,6 +26,7 @@ function calc_water_need(){
                     console.log("in wheat calc_water_need");
               //moisture_required
               moisture_required=(45 - field_moisture) / 100; 
+                    console.log("moisture_required",moisture_required)
               let index_of_stage=wheat_stage_eng.indexOf(current_stage);
               volume_of_field= 2.47105 * wheat_stage_eng[index_of_stage];  //2.47105 is land size
               console.log(wheat_stage_eng[index_of_stage]);
