@@ -76,7 +76,7 @@ async function fetchData() {
   async function callApiEvery3Seconds() {
     while (true) {
       await fetchData();
-      await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for 3 seconds
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 3 seconds
     }
   }
   
