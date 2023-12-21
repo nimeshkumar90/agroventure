@@ -11,7 +11,7 @@ let field_moisture=0;
 let wheat_stage_eng=["germination", "crown root initiation", "active tillering", "flowering", "grain filling"];
 let wheat_stage_hin=["germination_h", "crown root initiation_h", "active tillering_h", "flowering_h", "grain filling_h"];
 let jowar_stage_eng=["germination", "vegetative growth","flowering","maturity"];
-let jowar_stage_eng=["germination_h", "vegetative growth_h","flowering_h","maturity_h"];
+let jowar_stage_hin=["germination_h", "vegetative growth_h","flowering_h","maturity_h"];
 //Variables end
 function changeMoistureLevel(moisture){
     // Modify the style of the ::before pseudo-element
