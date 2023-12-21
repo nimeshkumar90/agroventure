@@ -139,7 +139,8 @@ async function fetchData() {
         this.firstChild.style="border: 1px solid #4E9F3D;";
         current_crop=this.textContent.trim();
         console.log(current_crop);
-              let current_page=getCurrentPage();
+          let current_page=getCurrentPage();
+              console.log("Current Page",current_page);
         if (current_crop==="Wheat"){
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
             crop_stages_ul.innerHTML="";
