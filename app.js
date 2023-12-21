@@ -109,9 +109,9 @@ async function fetchData() {
               crop_stages_ul.innerHTML="<li><a class='dropdown-item' href='#' id='crop_stage_li'>"+element+"</a></li>"
             });
         }
-        else if (current_crop==="Wheat"){
+        else if (current_crop==="Jowar"){
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
-            wheat_stage_eng.forEach(function(element) {
+            jowar_stage_eng.forEach(function(element) {
               crop_stages_ul.innerHTML="<li><a class='dropdown-item' href='#' id='crop_stage_li'>"+element+"</a></li>"
             });
         }
