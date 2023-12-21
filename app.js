@@ -125,7 +125,7 @@ async function fetchData() {
       });
       function setCropStage()
           {
-              alert("");
+              alert(this);
               
           }
       let crop_stage_li=document.querySelectorAll(".crop_stage_li");
