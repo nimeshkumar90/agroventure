@@ -98,7 +98,8 @@ async function fetchData() {
     {
         current_stage=this.textContent;
         console.log(current_stage);
-        crop_stage_drop_down_element.textContent=current_stage;
+        let crop_stage_drop_down=document.querySelector("#crop_stage_drop_down");
+        crop_stage_drop_down.textContent=current_stage;
     }
     // Define the click event handler function
     function handleClick() {
