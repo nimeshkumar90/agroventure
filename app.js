@@ -124,6 +124,7 @@ async function fetchData() {
               console.log(wheat_stage_eng[index_of_stage]);
               volume_req=moisture_required * volume_of_field;
               hours_req=volume_req/4500;
+              console.log(hours_req);
               return hours_req;
           }
           console.log("calc_water_need");
