@@ -116,7 +116,7 @@ async function fetchData() {
         this.firstChild.style="border: 1px solid #4E9F3D;";
         current_crop=this.textContent.trim();
         console.log(current_crop);
-        if (current_crop==="Wheat"){
+        if (current_crop==="Wheat" || current_crop==="गेहूँ"){
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
             crop_stages_ul.innerHTML="";
             if (getCurrentPage() === "index.html")
@@ -138,7 +138,7 @@ async function fetchData() {
                   console.log(crop_stage);
               });
         }
-        else if (current_crop==="Jowar"){
+        else if (current_crop==="Jowar" || current_crop==="ज्वार"){
             
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
             crop_stages_ul.innerHTML="";
