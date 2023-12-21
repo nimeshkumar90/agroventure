@@ -75,7 +75,7 @@ async function fetchData() {
   
       const data = await response.json();
       field_moisture=data["feeds"][0]["field1"];
-        
+      calc_water_need();  
       changeMoistureLevel(data["feeds"][0]["field1"]);
       console.log('API response:', data["feeds"][0]["field1"]);
     } catch (error) {
@@ -121,6 +121,7 @@ async function fetchData() {
               moisture_required=(45 - field_moisture) / 100; 
               let index_of_stage=wheat_stage_eng.indexOf(current_stage);
               volume_of_field= 2.47105 * wheat_stage_eng[index_of_stage];  //2.47105 is land size
+              console.log(wheat_stage_eng[index_of_stage]);
               volume_req=moisture_required * volume_of_field;
               hours_req=volume_req/4500;
               return hours_req;
