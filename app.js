@@ -8,6 +8,10 @@ let crop_stage_drop_down_element=document.querySelector("#crop_stage_drop_down")
 let crops_icons_element=document.querySelectorAll("#crops_icons article");
 let nim_moisture_level=0;
 let field_moisture=0;
+let wheat_stage_eng=["germination", "crown root initiation", "active tillering", "flowering", "grain filling"];
+let wheat_stage_hin=["germination_h", "crown root initiation_h", "active tillering_h", "flowering_h", "grain filling_h"];
+let jowar_stage_eng=["germination", "vegetative growth","flowering","maturity"];
+let jowar_stage_eng=["germination_h", "vegetative growth_h","flowering_h","maturity_h"];
 //Variables end
 function changeMoistureLevel(moisture){
     // Modify the style of the ::before pseudo-element
@@ -65,7 +69,8 @@ async function fetchData() {
       }
   
       const data = await response.json();
-      field_moisture=data["feeds"][0]["field1"];  
+      field_moisture=data["feeds"][0]["field1"];
+        
       changeMoistureLevel(data["feeds"][0]["field1"]);
       console.log('API response:', data["feeds"][0]["field1"]);
     } catch (error) {
