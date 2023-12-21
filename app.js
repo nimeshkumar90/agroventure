@@ -99,7 +99,7 @@ async function fetchData() {
         current_stage=this.textContent;
         console.log(current_stage);
         let crop_stage_drop_down=document.querySelector("#crop_stage_drop_down");
-        crop_stage_drop_down.innerHTML=current_stage;
+        crop_stage_drop_down.innerHTML="Just Testing";
     }
     // Define the click event handler function
     function handleClick() {
@@ -117,7 +117,7 @@ async function fetchData() {
             });
             
               let crop_stage_li=document.querySelectorAll(".crop_stage_li");
-              console.log("yo yo Nimesh Kumar");
+              console.log("Nimesh Kumar");
               crop_stage_li.forEach(crop_stage=>{
                   crop_stage.addEventListener('click', setCropStage);
                   console.log(crop_stage);
@@ -130,7 +130,7 @@ async function fetchData() {
               crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item crop_stage_li' href='#' id='crop_stage_li'>"+element+"</a></li>"
             });
             let crop_stage_li=document.querySelectorAll(".crop_stage_li");
-              console.log("yo yo Nimesh Kumar");
+              console.log("Nimesh Kumar");
               crop_stage_li.forEach(crop_stage=>{
                   crop_stage.addEventListener('click', setCropStage);
                   console.log(crop_stage);
