@@ -94,7 +94,10 @@ async function fetchData() {
       crop_stage_drop_down_element.innerHTML="<i data-feather='trending-up' width='18' ></i> &nbsp;" + document.getElementById(tgt.id).textContent;
       current_stage=document.getElementById(tgt.id).textContent;
     });
-
+    function setCropStage()
+    {
+        alert(this);
+    }
     // Define the click event handler function
     function handleClick() {
         // Your code here
@@ -109,6 +112,15 @@ async function fetchData() {
             wheat_stage_eng.forEach(function(element) {
               crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item crop_stage_li' href='#' id='crop_stage_li'>"+element+"</a></li>"
             });
+            
+              let crop_stage_li=document.querySelectorAll(".crop_stage_li");
+              console.log("yo yo Nimesh Kumar");
+              crop_stage_li.forEach(crop_stage=>{
+                  crop_stage.addEventListener('click', setCropStage);
+                  console.log(crop_stage);
+                  
+              });
+
         }
         else if (current_crop==="Jowar"){
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
@@ -123,17 +135,5 @@ async function fetchData() {
       crops_icons_element.forEach(button => {
         button.addEventListener('click', handleClick);
       });
-      function setCropStage()
-          {
-              alert(this);
-              
-          }
-      let crop_stage_li=document.querySelectorAll(".crop_stage_li");
-      console.log("yo yo Nimesh Kumar");
-      crop_stage_li.forEach(crop_stage=>{
-          crop_stage.addEventListener('click', setCropStage);
-          console.log(crop_stage);
-          alert(crop_stage.textContent);
-      });
-
+      
   });
