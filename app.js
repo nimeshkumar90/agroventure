@@ -96,6 +96,7 @@ async function fetchData() {
     });
     function setCropStage()
     {
+        current_stage=this.textContent;
         alert(this.textContent);
     }
     // Define the click event handler function
