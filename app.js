@@ -92,6 +92,13 @@ async function fetchData() {
       //crop_stage_drop_down_element.innerHTML="<i data-feather='trending-up' width='18' ></i> &nbsp;" + document.getElementById(tgt.id).textContent;
       //current_stage=document.getElementById(tgt.id).textContent;
     });
+    function getCurrentPage(){
+        // Get the full path of the current URL
+        let fullPath = window.location.pathname;
+        // Extract the page name from the full path
+        let pageName = fullPath.split('/').pop();
+        console.log(pageName);
+    }
     function setCropStage()
     {
         current_stage=this.textContent;
@@ -99,6 +106,7 @@ async function fetchData() {
         let crop_stage_drop_down=document.querySelector("#crop_stage_drop_down");
         console.log(crop_stage_drop_down);
         crop_stage_drop_down.textContent=current_stage;
+        getCurrentPage();
     }
     // Define the click event handler function
     function handleClick() {
@@ -123,6 +131,7 @@ async function fetchData() {
               });
         }
         else if (current_crop==="Jowar"){
+            
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
             crop_stages_ul.innerHTML="";
             jowar_stage_eng.forEach(function(element) {
