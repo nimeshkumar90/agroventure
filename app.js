@@ -133,6 +133,7 @@ async function fetchData() {
       crop_stage_li.forEach(crop_stage=>{
           crop_stage.addEventListener('click', setCropStage);
           console.log(crop_stage);
+          alert(crop_stage.textContent);
       });
 
   });
