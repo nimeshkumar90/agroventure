@@ -129,6 +129,7 @@ async function fetchData() {
               
           }
       let crop_stage_li=document.querySelectorAll(".crop_stage_li");
+      console.log("yo yo Nimesh Kumar");
       crop_stage_li.forEach(crop_stage=>{
           button.addEventListener('click', setCropStage);
           console.log();
