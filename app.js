@@ -107,14 +107,14 @@ async function fetchData() {
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
             crop_stages_ul.innerHTML="";
             wheat_stage_eng.forEach(function(element) {
-              crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item' href='#' id='crop_stage_li'>"+element+"</a></li>"
+              crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item crop_stage_li' href='#' id='crop_stage_li'>"+element+"</a></li>"
             });
         }
         else if (current_crop==="Jowar"){
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
             crop_stages_ul.innerHTML="";
             jowar_stage_eng.forEach(function(element) {
-              crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item' href='#' id='crop_stage_li'>"+element+"</a></li>"
+              crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item crop_stage_li' href='#' id='crop_stage_li'>"+element+"</a></li>"
             });
         }
       }
@@ -123,5 +123,7 @@ async function fetchData() {
       crops_icons_element.forEach(button => {
         button.addEventListener('click', handleClick);
       });
+      let crop_stage_li=document.querySelectorAll(".crop_stage_li");
+      crop_stage_li.forEach()
 
   });
