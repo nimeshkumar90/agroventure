@@ -120,6 +120,7 @@ async function fetchData() {
         // Extract the page name from the full path
         let pageName = fullPath.split('/').pop();
         console.log(pageName);
+              return pageName;
     }
     function setCropStage()
     {
