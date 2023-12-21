@@ -1,6 +1,7 @@
 //Variables start
 let current_crop="";
 let current_stage="";
+let land_size=1;
 let moisture_element=document.querySelector("#live-moisture");
 let moisture_level_element=document.querySelector("#water_level");
 let crop_element=document.querySelector("#crop");
@@ -108,6 +109,10 @@ async function fetchData() {
         crop_stage_drop_down.textContent=current_stage;
         
     }
+      function calc_water_need(){
+          //for every acre
+          console.log("calc_water_need");
+      }
     // Define the click event handler function
     function handleClick() {
         // Your code here
