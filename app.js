@@ -123,7 +123,13 @@ async function fetchData() {
       crops_icons_element.forEach(button => {
         button.addEventListener('click', handleClick);
       });
+      function setCropStage()
+          {
+              alert("");
+          }
       let crop_stage_li=document.querySelectorAll(".crop_stage_li");
-      crop_stage_li.forEach()
+      crop_stage_li.forEach(crop_stage=>{
+          button.addEventListener('click', setCropStage);
+      });
 
   });
