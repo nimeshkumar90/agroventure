@@ -99,6 +99,7 @@ async function fetchData() {
         current_stage=this.textContent;
         console.log(current_stage);
         let crop_stage_drop_down=document.querySelector("#crop_stage_drop_down");
+        console.log(crop_stage_drop_down);
         crop_stage_drop_down.innerHTML="Just Testing";
     }
     // Define the click event handler function
