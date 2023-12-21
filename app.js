@@ -4,6 +4,7 @@ let current_stage="";
 let moisture_required=0;
 let volume_of_field=0;
 let volume_req=0;
+let hours_req=0;
 let land_size=1;
 let data_sheet_wheat=[0.05, 0.25, 0.45, 0.65, 0.9];
 let data_sheet_jowar=[0.15, 0.7, 1.16, 1.5];
@@ -118,8 +119,11 @@ async function fetchData() {
           if (current_crop == "Wheat"){
               //moisture_required
               moisture_required=(45 - field_moisture) / 100; 
-              volume_of_field= 2.47105; 
-              volume_req=moisture_required * 
+              let index_of_stage=wheat_stage_eng.indexOf(current_stage);
+              volume_of_field= 2.47105 * wheat_stage_eng[index_of_stage];  //2.47105 is land size
+              volume_req=moisture_required * volume_of_field;
+              hours_req=volume_req/4500;
+              return hours_req;
           }
           console.log("calc_water_need");
       }
