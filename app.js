@@ -20,6 +20,21 @@ let wheat_stage_hin=["germination_h", "crown root initiation_h", "active tilleri
 let jowar_stage_eng=["germination", "vegetative growth","flowering","maturity"];
 let jowar_stage_hin=["germination_h", "vegetative growth_h","flowering_h","maturity_h"];
 //Variables end
+function calc_water_need(){
+          //for every acre
+          if (current_crop == "Wheat"){
+              //moisture_required
+              moisture_required=(45 - field_moisture) / 100; 
+              let index_of_stage=wheat_stage_eng.indexOf(current_stage);
+              volume_of_field= 2.47105 * wheat_stage_eng[index_of_stage];  //2.47105 is land size
+              console.log(wheat_stage_eng[index_of_stage]);
+              volume_req=moisture_required * volume_of_field;
+              hours_req=volume_req/4500;
+              console.log(hours_req);
+              return hours_req;
+          }
+          console.log("calc_water_need");
+      }
 function changeMoistureLevel(moisture){
     // Modify the style of the :: before pseudo-element
     moisture_element.textContent=moisture;
@@ -114,21 +129,7 @@ async function fetchData() {
         console.log(crop_stage_drop_down);
         crop_stage_drop_down.textContent=current_stage;
     }
-      function calc_water_need(){
-          //for every acre
-          if (current_crop == "Wheat"){
-              //moisture_required
-              moisture_required=(45 - field_moisture) / 100; 
-              let index_of_stage=wheat_stage_eng.indexOf(current_stage);
-              volume_of_field= 2.47105 * wheat_stage_eng[index_of_stage];  //2.47105 is land size
-              console.log(wheat_stage_eng[index_of_stage]);
-              volume_req=moisture_required * volume_of_field;
-              hours_req=volume_req/4500;
-              console.log(hours_req);
-              return hours_req;
-          }
-          console.log("calc_water_need");
-      }
+      
     // Define the click event handler function
     function handleClick() {
         // Your code here
