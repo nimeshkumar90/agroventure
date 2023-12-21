@@ -111,6 +111,9 @@ async function fetchData() {
     }
       function calc_water_need(){
           //for every acre
+          if (current_crop == "Wheat"){
+              
+          }
           console.log("calc_water_need");
       }
     // Define the click event handler function
