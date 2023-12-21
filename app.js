@@ -101,6 +101,10 @@ async function fetchData() {
         crop_element.textContent=this.textContent;
         console.log(this.firstChild);
         this.firstChild.style="border: 1px solid #4E9F3D;";
+        current_crop=this.textContent;
+        if (current_crop==="Wheat"){
+            alert(current_crop);
+        }
       }
   
       // Attach the click event listener to each button using forEach
