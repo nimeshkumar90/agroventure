@@ -103,7 +103,7 @@ async function fetchData() {
         this.firstChild.style="border: 1px solid #4E9F3D;";
         current_crop=this.textContent.trim();
         console.log(current_crop);
-        if (current_crop.==="Wheat"){
+        if (current_crop==="Wheat"){
             alert(current_crop);
         }
       }
