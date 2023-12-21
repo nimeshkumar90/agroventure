@@ -56,8 +56,6 @@ function changeMoistureLevel(moisture){
     {
         document.documentElement.style.setProperty('--level', "30%");
     }
-    
-
 }
 async function fetchData() {
     try {
