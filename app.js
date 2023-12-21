@@ -91,8 +91,8 @@ async function fetchData() {
   window.addEventListener("load", function() { // when the page has loaded
     document.getElementById("crop_stages_ul").addEventListener("click", function(e) {
       const tgt = e.target;
-      crop_stage_drop_down_element.innerHTML="<i data-feather='trending-up' width='18' ></i> &nbsp;" + document.getElementById(tgt.id).textContent;
-      current_stage=document.getElementById(tgt.id).textContent;
+      //crop_stage_drop_down_element.innerHTML="<i data-feather='trending-up' width='18' ></i> &nbsp;" + document.getElementById(tgt.id).textContent;
+      //current_stage=document.getElementById(tgt.id).textContent;
     });
     function setCropStage()
     {
