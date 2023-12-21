@@ -23,6 +23,7 @@ let jowar_stage_hin=["germination_h", "vegetative growth_h","flowering_h","matur
 function calc_water_need(){
           //for every acre
           if (current_crop == "Wheat"){
+                    console.log("in wheat calc_water_need");
               //moisture_required
               moisture_required=(45 - field_moisture) / 100; 
               let index_of_stage=wheat_stage_eng.indexOf(current_stage);
@@ -33,7 +34,7 @@ function calc_water_need(){
               console.log(hours_req);
               return hours_req;
           }
-          console.log("calc_water_need");
+          
       }
 function changeMoistureLevel(moisture){
     // Modify the style of the :: before pseudo-element
