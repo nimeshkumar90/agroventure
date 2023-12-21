@@ -128,6 +128,14 @@ async function fetchData() {
             jowar_stage_eng.forEach(function(element) {
               crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item crop_stage_li' href='#' id='crop_stage_li'>"+element+"</a></li>"
             });
+
+            let crop_stage_li=document.querySelectorAll(".crop_stage_li");
+              console.log("yo yo Nimesh Kumar");
+              crop_stage_li.forEach(crop_stage=>{
+                  crop_stage.addEventListener('click', setCropStage);
+                  console.log(crop_stage);
+                  
+              });
         }
       }
   
