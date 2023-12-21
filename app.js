@@ -1,7 +1,12 @@
 //Variables start
 let current_crop="";
 let current_stage="";
+let moisture_required=0;
+let volume_of_field=0;
+let volume_req=0;
 let land_size=1;
+let data_sheet_wheat=[0.05, 0.25, 0.45, 0.65, 0.9];
+let data_sheet_jowar=[0.15, 0.7, 1.16, 1.5];
 let moisture_element=document.querySelector("#live-moisture");
 let moisture_level_element=document.querySelector("#water_level");
 let crop_element=document.querySelector("#crop");
@@ -107,12 +112,14 @@ async function fetchData() {
         let crop_stage_drop_down=document.querySelector("#crop_stage_drop_down");
         console.log(crop_stage_drop_down);
         crop_stage_drop_down.textContent=current_stage;
-        
     }
       function calc_water_need(){
           //for every acre
           if (current_crop == "Wheat"){
-              
+              //moisture_required
+              moisture_required=(45 - field_moisture) / 100; 
+              volume_of_field= 2.47105; 
+              volume_req=moisture_required * 
           }
           console.log("calc_water_need");
       }
