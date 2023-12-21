@@ -99,7 +99,7 @@ async function fetchData() {
         current_stage=this.textContent;
         console.log(current_stage);
         let crop_stage_drop_down=document.querySelector("#crop_stage_drop_down");
-        crop_stage_drop_down.textContent=current_stage;
+        crop_stage_drop_down.innerHTML=current_stage;
     }
     // Define the click event handler function
     function handleClick() {
@@ -117,7 +117,7 @@ async function fetchData() {
             });
             
               let crop_stage_li=document.querySelectorAll(".crop_stage_li");
-              console.log("Only Nimesh Kumar");
+              console.log("yo yo Nimesh Kumar");
               crop_stage_li.forEach(crop_stage=>{
                   crop_stage.addEventListener('click', setCropStage);
                   console.log(crop_stage);
