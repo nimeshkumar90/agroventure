@@ -104,7 +104,16 @@ async function fetchData() {
         current_crop=this.textContent.trim();
         console.log(current_crop);
         if (current_crop==="Wheat"){
-            alert(current_crop);
+            let crop_stages_ul=document.querySelector("#crop_stages_ul");
+            wheat_stage_eng.forEach(function(element) {
+              crop_stages_ul.innerHTML="<li><a class='dropdown-item' href='#' id='crop_stage_li'>"+element+"</a></li>"
+            });
+        }
+        else if (current_crop==="Wheat"){
+            let crop_stages_ul=document.querySelector("#crop_stages_ul");
+            wheat_stage_eng.forEach(function(element) {
+              crop_stages_ul.innerHTML="<li><a class='dropdown-item' href='#' id='crop_stage_li'>"+element+"</a></li>"
+            });
         }
       }
   
