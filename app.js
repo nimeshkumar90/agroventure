@@ -127,7 +127,7 @@ async function fetchData() {
             }
             else if (getCurrentPage() === "index_hindi.html")
             {
-                wheat_stage_eng.forEach(function(element) {
+                wheat_stage_hin.forEach(function(element) {
                   crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item crop_stage_li' href='#' id='crop_stage_li'>"+element+"</a></li>"
                 });
             }
@@ -142,9 +142,20 @@ async function fetchData() {
             
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
             crop_stages_ul.innerHTML="";
-            jowar_stage_eng.forEach(function(element) {
-              crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item crop_stage_li' href='#' id='crop_stage_li'>"+element+"</a></li>"
-            });
+            if (getCurrentPage() === "index.html")
+            {
+                
+                jowar_stage_eng.forEach(function(element) {
+                  crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item crop_stage_li' href='#' id='crop_stage_li'>"+element+"</a></li>"
+                });
+            }
+            else if (getCurrentPage() === "index_hindi.html")
+            {
+                jowar_stage_hin.forEach(function(element) {
+                  crop_stages_ul.innerHTML=crop_stages_ul.innerHTML+"<li><a class='dropdown-item crop_stage_li' href='#' id='crop_stage_li'>"+element+"</a></li>"
+                });
+            }
+            
             let crop_stage_li=document.querySelectorAll(".crop_stage_li");
               console.log("Nimesh Kumar");
               crop_stage_li.forEach(crop_stage=>{
