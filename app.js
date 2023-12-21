@@ -142,6 +142,7 @@ async function fetchData() {
         if (current_crop==="Wheat"){
             let crop_stages_ul=document.querySelector("#crop_stages_ul");
             crop_stages_ul.innerHTML="";
+                  console.log("I am Wheat");
             if (getCurrentPage() === "index.html")
             {
                 wheat_stage_eng.forEach(function(element) {
