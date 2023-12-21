@@ -97,7 +97,7 @@ async function fetchData() {
     function setCropStage()
     {
         current_stage=this.textContent;
-        alert(current_stage);
+        console.log(current_stage);
         crop_stage_drop_down_element.textContent=current_stage;
     }
     // Define the click event handler function
