@@ -14,7 +14,7 @@ let jowar_stage_eng=["germination", "vegetative growth","flowering","maturity"];
 let jowar_stage_hin=["germination_h", "vegetative growth_h","flowering_h","maturity_h"];
 //Variables end
 function changeMoistureLevel(moisture){
-    // Modify the style of the ::before pseudo-element
+    // Modify the style of the :: before pseudo-element
     moisture_element.textContent=moisture;
     if (moisture >=90)
     {
@@ -97,7 +97,7 @@ async function fetchData() {
     function setCropStage()
     {
         current_stage=this.textContent;
-        //alert(this.textContent);
+        alert(current_stage);
         crop_stage_drop_down_element.textContent=this.textContent;
     }
     // Define the click event handler function
