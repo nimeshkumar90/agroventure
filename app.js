@@ -37,12 +37,12 @@ function calc_water_need(){
                     console.log("volume_req",volume_req);
               hours_req=parseInt((volume_req/45000));
               console.log("hours_req",hours_req);
-                              water_req_div.innerHTML=hours_req;
+                              water_req_div.innerHTML="<p>"+ hours_req +" Hours<p>";
               return hours_req;
                     }
                     else
                     {
-                              water_req_div.innerHTML=hours_req;
+                              water_req_div.innerHTML="No need to irrigate more right now";
                               console.log("No need to irrigate more right now");
                               return "No need to irrigate more right now"
                     }
@@ -62,12 +62,13 @@ function calc_water_need(){
                     console.log("volume_req",volume_req);
               hours_req=parseInt((volume_req/45000));
               console.log("hours_req",hours_req);
+              water_req_div.innerHTML="<p>"+ hours_req +" Hours<p>";                
               return hours_req;
                     }
                     else
                     {
                               console.log("No need to irrigate more right now");
-                              
+                              water_req_div.innerHTML="No need to irrigate more right now";
                               return "No need to irrigate more right now";
                     }
           }
