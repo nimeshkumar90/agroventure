@@ -30,7 +30,7 @@ function calc_water_need(){
                     
               let index_of_stage=wheat_stage_eng.indexOf(current_stage);
                     
-              volume_of_field= 2.47105 * data_sheet_wheat[index_of_stage];  //2.47105 is land size
+              volume_of_field= 4000 * data_sheet_wheat[index_of_stage];  // is land size
               console.log("volume_of_field",volume_of_field);
               volume_req=moisture_required * volume_of_field;
                     console.log("volume_req",volume_req);
