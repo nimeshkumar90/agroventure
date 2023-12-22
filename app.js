@@ -126,7 +126,8 @@ async function fetchData() {
   
       const data = await response.json();
       field_moisture=data["feeds"][0]["field1"];
-      calc_water_need();  
+      let nim_water=calc_water_need();  
+       water_req_div.textContent=nim_water;       
       changeMoistureLevel(data["feeds"][0]["field1"]);
       console.log('API response:', data["feeds"][0]["field1"]);
     } catch (error) {
