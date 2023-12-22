@@ -23,6 +23,7 @@ let jowar_stage_hin=["germination_h", "vegetative growth_h","flowering_h","matur
 function calc_water_need(){
           //for every acre
           if (current_crop == "Wheat"){
+                    if (field_moisture < 45){
                     console.log("in wheat calc_water_need");
               //moisture_required
               moisture_required=(45 - field_moisture) / 100; 
@@ -36,6 +37,11 @@ function calc_water_need(){
               hours_req=volume_req/4500;
               console.log("hours_req",hours_req);
               return hours_req;
+                    }
+                    else
+                    {
+                              return "No need to irrigate more right now"
+                    }
           }
           //for every acre
           if (current_crop == "Jowar"){
