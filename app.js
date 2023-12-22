@@ -40,11 +40,13 @@ function calc_water_need(){
                     }
                     else
                     {
+                              console.log("No need to irrigate more right now");
                               return "No need to irrigate more right now"
                     }
           }
           //for every acre
           if (current_crop == "Jowar"){
+                    if (field_moisture < 45){
                     console.log("in Jowar calc_water_need");
               //moisture_required
               moisture_required=(45 - field_moisture) / 100; 
@@ -58,6 +60,13 @@ function calc_water_need(){
               hours_req=volume_req/4500;
               console.log("hours_req",hours_req);
               return hours_req;
+                    }
+                    else
+                    {
+                              console.log("hours_req",hours_req);
+                              
+                              return "No need to irrigate more right now";
+                    }
           }
           
       }
