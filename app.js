@@ -35,7 +35,7 @@ function calc_water_need(){
               console.log("volume_of_field",volume_of_field);
               volume_req=moisture_required * volume_of_field * 1000;
                     console.log("volume_req",volume_req);
-              hours_req=(volume_req/45000);
+              hours_req=parseInt((volume_req/45000));
               console.log("hours_req",hours_req);
               return hours_req;
                     }
@@ -58,7 +58,7 @@ function calc_water_need(){
               console.log("volume_of_field",volume_of_field);
               volume_req=moisture_required * volume_of_field * 1000;
                     console.log("volume_req",volume_req);
-              hours_req=(volume_req/45000);
+              hours_req=parseInt((volume_req/45000));
               console.log("hours_req",hours_req);
               return hours_req;
                     }
