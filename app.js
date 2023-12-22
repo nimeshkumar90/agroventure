@@ -13,6 +13,7 @@ let moisture_level_element=document.querySelector("#water_level");
 let crop_element=document.querySelector("#crop");
 let crop_stage_drop_down_element=document.querySelector("#crop_stage_drop_down");
 let crops_icons_element=document.querySelectorAll("#crops_icons article");
+let water_req_div=document.querySelectorAll("#water_req_div");
 let nim_moisture_level=0;
 let field_moisture=0;
 let wheat_stage_eng=["germination", "crown root initiation", "active tillering", "flowering", "grain filling"];
