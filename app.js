@@ -7,7 +7,7 @@ let volume_req=0;
 let hours_req=0;
 let land_size=1;
 let data_sheet_wheat=[0.05, 0.25, 0.45, 0.65, 0.9];
-let data_sheet_jowar=[0.15, 0.7, 1.16, 1.5];
+let data_sheet_jowar=[0.15, 0.4, 0.6, 1.0];
 let moisture_element=document.querySelector("#live-moisture");
 let moisture_level_element=document.querySelector("#water_level");
 let crop_element=document.querySelector("#crop");
@@ -32,7 +32,7 @@ function calc_water_need(){
                     
               volume_of_field= 4000 * data_sheet_wheat[index_of_stage];  // is land size
               console.log("volume_of_field",volume_of_field);
-              volume_req=moisture_required * volume_of_field*1000;
+              volume_req=moisture_required * volume_of_field * 1000;
                     console.log("volume_req",volume_req);
               hours_req=(volume_req/4500);
               console.log("hours_req",hours_req);
