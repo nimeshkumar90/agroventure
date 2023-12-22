@@ -63,7 +63,7 @@ function calc_water_need(){
                     }
                     else
                     {
-                              console.log("hours_req",hours_req);
+                              console.log("No need to irrigate more right now");
                               
                               return "No need to irrigate more right now";
                     }
