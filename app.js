@@ -55,9 +55,9 @@ function calc_water_need(){
                     
               volume_of_field= 4000 * data_sheet_jowar[index_of_stage];  //2.47105 is land size
               console.log("volume_of_field",volume_of_field);
-              volume_req=moisture_required * volume_of_field;
+              volume_req=moisture_required * volume_of_field * 1000;
                     console.log("volume_req",volume_req);
-              hours_req=(volume_req*1000/4500)-4;
+              hours_req=(volume_req/4500);
               console.log("hours_req",hours_req);
               return hours_req;
                     }
