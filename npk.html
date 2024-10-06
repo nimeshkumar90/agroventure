@@ -303,10 +303,11 @@
                 f_fertilizer.innerHTML="DAP";
                 f_field_size.innerHTML=landSize;
                }
-               else if(crop_stage == "Stemming"){
+               else if(crop_stage == "Stemming"  or crop_stage == "Emergence")  {
                 f_fertilizer.innerHTML="Urea";
                 f_field_size.innerHTML=landSize;
                }
+                 
                else
                {
                 f_fertilizer.innerHTML="no need for fertilizer";
