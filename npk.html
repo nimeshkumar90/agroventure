@@ -109,8 +109,8 @@
                                 <p class="rounded-data small"><i data-feather="map" width="10" > </i> Landsize : <span id="land_size_info"> 2 </span><span id="land_unit">acre</span></p>
                             </article>
                             <article>
-                                <p class="pe-2">
-                                    Kindly put <span><strong id="quantity">50 kg</strong></span> <span id="fertilizer"> <strong> DAP </strong></span> for landsize <span><strong id="field_size">2</strong></span><span id="land_unit"> acre</span>.
+                                <p class="pe-2" id="fertilizer_req_p">
+                                    Kindly put <span><strong id="quantity">50</strong>kg</span> <span id="fertilizer"> <strong> <span id="fertilizer_span">DAP</span> </strong></span> for landsize <span><strong id="field_size">2</strong></span><span id="land_unit"> acre</span>.
                                 </p>
                             </article>
                             <!--<p>Quantity : <span id="crop"> 50 </span>kg</p>
@@ -204,6 +204,7 @@
                                 <p>Maturity</p>
                             </article>
                         </article>
+
                     </section>
 
                     <div class="pt-4">
@@ -243,11 +244,9 @@
         let stage_image_info_bar=document.querySelector("#stage_image");
         let crop_image_info_bar=document.querySelector("#crop_image");
         let field_size_info_bar=document.querySelector("#field_size");
-        
-        //let nitrogen_data="";
-        //let phosphorus_data="";
-        //let potassium_data="";
-        //let nitrogen_
+        let global_nitrogen="";
+        let global_phosphorus="";
+        let global_photassuim="";
         const crop_images = {
             "wheat":"wheat-plant.png", 
             "mustard":"mustard.png",
@@ -285,7 +284,34 @@
                 crop_image_info_bar.src=crop_images[crop.toLowerCase()];
                 field_size_info_bar.textContent=landSize;
                 document.querySelector("#Infobar").style="display:flex";
-                
+                console.log("Global Nitrogen",global_nitrogen,"global_phosphorus",global_phosphorus,"global_photassuim",global_photassuim);
+                let urea_req=Math.trunc((50-global_nitrogen * 0.26)*(100/46)*0.404);
+                let dap_req="";
+                urea_req=urea_req*landSize;
+                /*
+                <p class="pe-2">
+                                    Kindly put <span><strong id="quantity">50 </strong></span> <span id="fertilizer"> <strong> <span id="fertilizer_span">DAP</span> </strong></span> for landsize <span><strong id="field_size">2</strong></span><span id="land_unit"> acre</span>.
+                                </p>
+                */
+               let f_quantity=document.getElementById("quantity");
+               let f_fertilizer=document.getElementById("fertilizer");
+               let f_field_size=document.getElementById("field_size");
+               let fertilizer_req_p=document.getElementById("fertilizer_req_p");
+               f_quantity.innerHTML=urea_req;
+               if(crop_stage == "Germination")
+               {
+                f_fertilizer.innerHTML="DAP";
+                f_field_size.innerHTML=landSize;
+               }
+               else if(crop_stage == "Stemming"){
+                f_fertilizer.innerHTML="Urea";
+                f_field_size.innerHTML=landSize;
+               }
+               else
+               {
+                f_fertilizer.innerHTML="no need for fertilizer";
+               }
+               
             }
         }
         add_info_btn.addEventListener('click', slide_in_form); 
@@ -307,6 +333,9 @@
             let nitrogen_data=document.querySelector("#nitrogen_data").textContent=n;
             let phosphorus_data=document.querySelector("#phosphorus_data").textContent=p;
             let potassium_data=document.querySelector("#potassium_data").textContent=k;
+            global_nitrogen=n;
+            global_phosphorus=p;
+            global_photassuim=k;
         }
         async function fetchData() {
             try {
