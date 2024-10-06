@@ -204,7 +204,6 @@
                                 <p>Maturity</p>
                             </article>
                         </article>
-
                     </section>
 
                     <div class="pt-4">
@@ -244,6 +243,11 @@
         let stage_image_info_bar=document.querySelector("#stage_image");
         let crop_image_info_bar=document.querySelector("#crop_image");
         let field_size_info_bar=document.querySelector("#field_size");
+        
+        //let nitrogen_data="";
+        //let phosphorus_data="";
+        //let potassium_data="";
+        //let nitrogen_
         const crop_images = {
             "wheat":"wheat-plant.png", 
             "mustard":"mustard.png",
@@ -281,6 +285,7 @@
                 crop_image_info_bar.src=crop_images[crop.toLowerCase()];
                 field_size_info_bar.textContent=landSize;
                 document.querySelector("#Infobar").style="display:flex";
+                
             }
         }
         add_info_btn.addEventListener('click', slide_in_form); 
